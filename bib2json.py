@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 # load the BibTeX file
 with open(args.bibtex_input, "r") as bibtex_input:
-    bib_database = bibtexparser.load(bibtex_input)
+    bib_database = bibtexparser.parse_file(bibtex_input)
 
 
 # function to convert a JSON entry back to BibTeX format
